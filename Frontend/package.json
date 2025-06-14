@@ -1,0 +1,13 @@
+{
+  "name": "express-frontend",
+  "version": "1.0.0",
+  "description": "Simple Express frontend with form",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.2"
+  }
+} 
