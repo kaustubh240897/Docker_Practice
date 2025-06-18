@@ -3,6 +3,9 @@ const axios = require('axios');
 const app = express();
 const port = 3000;
 
+// Get backend URL from environment variable with a default fallback
+const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:5001';
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
@@ -23,7 +26,7 @@ app.post('/submit', async (req, res) => {
 
         console.log('Sending to backend:', { name });
         
-        const response = await axios.post('http://backend:5001/process', 
+        const response = await axios.post(`${BACKEND_URL}/process`, 
             { name }, 
             {
                 headers: {
