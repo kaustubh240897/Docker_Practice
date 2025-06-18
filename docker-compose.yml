@@ -5,7 +5,7 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    image: 201652008/express-frontend:latest
+    image: 201652008/flask-frontend:latest
     ports:
       - "3000:3000"
     environment:
